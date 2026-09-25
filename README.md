@@ -51,7 +51,7 @@ python run_sop.py \
 - `examples/demo_profiles.jsonl`：64 条人工示例输入；`examples/build_demo_profiles.py` 说明其生成方法。
 - `sop/`：API 请求、参考决策生成与校验、五模块方法。
 - `scenario/wvs_subway/`：WVS 字段、八轮事件、事件数值特征、提示词和官方数据准备脚本。
-- `tests/`：不连接外部 API 的最小运行检查。
+
 
 本包不包含三个对照方法、论文实验入口、评价代码、实验配置网格、计算成本计数、真实 WVS 原始数据或本项目既有运行结果。
 
