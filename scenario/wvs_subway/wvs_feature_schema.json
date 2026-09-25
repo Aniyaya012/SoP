@@ -1,0 +1,29 @@
+{
+  "source": {
+    "dataset": "World Values Survey: Round Seven - Country-Pooled Datafile Version 6.0",
+    "doi": "https://doi.org/10.14281/18241.24",
+    "official_download_page": "https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp",
+    "license_note": "WVS permits non-commercial research use with citation but prohibits redistribution of the original data files."
+  },
+  "features": [
+    {"code": "X003R", "label": "Age group", "kind": "ordinal demographic", "meaning": "Age recoded into six WVS intervals."},
+    {"code": "Q260", "paper_code": "Q262", "label": "Sex", "kind": "categorical demographic", "meaning": "Respondent sex category in the official WVS Wave 7 v6.0 CSV. The paper labels this field Q262, but Q262 is age in the official release; Q260 is the compatible sex field."},
+    {"code": "Q273", "label": "Marital status", "kind": "categorical demographic", "meaning": "Respondent marital status."},
+    {"code": "Q274", "label": "Number of children", "kind": "ordinal household", "meaning": "Number of children reported by the respondent."},
+    {"code": "Q275", "label": "Education level", "kind": "ordinal demographic", "meaning": "Highest educational level of the respondent under ISCED 2011."},
+    {"code": "N_REGION_WVS", "label": "Country-specific WVS region", "kind": "categorical geographic", "meaning": "Country-specific regional identifier. It is not a cross-country-comparable social attribute."},
+    {"code": "G_TOWNSIZE", "label": "Settlement size", "kind": "ordinal geographic", "meaning": "Settlement size in eight groups."},
+    {"code": "Q3", "label": "Importance of leisure time", "kind": "ordinal attitude", "meaning": "How important leisure time is in the respondent's life."},
+    {"code": "Q46", "label": "Happiness", "kind": "ordinal wellbeing", "meaning": "Respondent's overall feeling of happiness."},
+    {"code": "Q55", "label": "Safe-shelter deprivation", "kind": "ordinal material-security", "meaning": "Frequency in the last 12 months that the respondent or family went without safe shelter."},
+    {"code": "Q57", "label": "Generalized social trust", "kind": "binary attitude", "meaning": "Whether most people can be trusted or one needs to be very careful."},
+    {"code": "Y003", "paper_label": "Secular values", "label": "Autonomy index", "kind": "continuous value index", "meaning": "WVS four-item autonomy index from -2 to 2. Lower values emphasize obedience and religious faith; higher values emphasize determination, perseverance, and independence."},
+    {"code": "I_AUTHORITY", "label": "Inverse respect for authority", "kind": "continuous value index", "meaning": "Welzel defiance component. Higher values indicate less respect for authority."},
+    {"code": "I_NATIONALISM", "label": "Inverse national pride", "kind": "continuous value index", "meaning": "Welzel defiance component. Higher values indicate lower national pride."},
+    {"code": "DEFIANCE", "label": "Defiance", "kind": "continuous value index", "meaning": "Welzel defiance sub-index. Higher values indicate stronger defiance."},
+    {"code": "SCEPTICISM", "label": "Scepticism", "kind": "continuous value index", "meaning": "Welzel scepticism index. Higher values indicate stronger scepticism."},
+    {"code": "AUTONOMY", "label": "Autonomy", "kind": "continuous value index", "meaning": "Welzel emancipative-values autonomy sub-index. Higher values indicate stronger autonomy."},
+    {"code": "EQUALITY", "label": "Equality", "kind": "continuous value index", "meaning": "Welzel emancipative-values equality sub-index. Higher values indicate stronger equality orientation."},
+    {"code": "I_DEVOUT", "label": "Inverse devoutness", "kind": "continuous value index", "meaning": "Welzel defiance component. Higher values indicate lower religious devoutness."}
+  ]
+}

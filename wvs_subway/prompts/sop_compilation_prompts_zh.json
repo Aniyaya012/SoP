@@ -1,0 +1,22 @@
+{
+  "module1_pairs": {
+    "system": "你是当前 WVS 地铁危机场景的任务相关因素分析器。只输出 JSON 对象。",
+    "user": "八轮事件：\n$scenario\n\n可量化事件因素：$event_definitions\n可用 WVS 个体属性：$attributes\n请提出 4 个不同机制的外部事件因素—个体属性候选对。每对都要能在只改变这两个目标因素的 2×2 情境中检验。事件因素和属性必须使用上面的原始键名。不要把年龄、职业、国家或群体标签直接作为原型。只输出 JSON：{\"pairs\":[{\"event\":\"...\",\"attribute\":\"...\",\"reason\":\"...\"}]}。"
+  },
+  "module1_decision": {
+    "system": "你是当前 WVS 地铁危机场景的受控预决策智能体。只输出 JSON 对象。",
+    "user": "五个选择分别是：1 完全支持政府；2 基本支持但要求透明和参与；3 中立等待；4 有较大疑虑并要求重新评估；5 完全不信任并要求独立调查。\n当前事件：$event\n累计事件特征：$cumulative\n标准化个体属性：$profile\n上一轮选择：$previous\n这是一个受控情境。根据给定输入选择一个选项。只输出 JSON：{\"decision\":\"1\"}，decision 必须是 1 至 5。"
+  },
+  "module2_rules": {
+    "system": "你是 WVS 决策案例的自然语言规则归纳器。只输出 JSON 对象。",
+    "user": "当前原型：$prototype。属性划分：$attribute_rule。下面是训练智能体的真实 API 决策案例，包含轮次、上一轮选择、当前事件特征、部分 WVS 属性和下一轮选择：\n$cases\n请归纳适用条件与决策变化，避免把关联写成因果结论。每条规则应是独立自然语言字符串。只输出 JSON：{\"rules\":[\"...\"]}。"
+  },
+  "module2_consolidate": {
+    "system": "你是 WVS 决策规则整理器。只输出 JSON 对象。",
+    "user": "两个原型的候选规则：$rules\n请将有案例支持的规则整理为通用、共享和各原型特有规则。只输出 JSON：{\"global_rules\":[\"...\"],\"shared_rules\":[\"...\"],\"prototype_rules\":{\"0\":[\"...\"],\"1\":[\"...\"]}}。不必为了填满类别而编造规则。"
+  },
+  "module3_programs": {
+    "system": "你是安全的 WVS 决策程序结构生成器。只输出 JSON 对象。",
+    "user": "当前原型：$prototype。自然语言规则：$rules\n允许的静态输入键：$attributes。允许的当前事件键：$event_fields。允许的累计事件键：$cumulative_fields。\n生成两个结构不同的 Python score 函数候选。函数签名必须是 def score(x, event, cumulative, previous_choice, previous_missing, p):。x 是训练集 min-max 归一化后的属性，event 与 cumulative 是 0 到 1 的映射，previous_choice 为 0 或上一轮选择除以 5，previous_missing 为首轮标志。score 返回连续值，之后由四个可拟合阈值映射到选项 1 至 5。只允许简单算术、比较、局部赋值、if/else 和 return；禁止导入、循环、函数调用、属性访问、文件/网络操作、随机数与输入特征之间的乘积。系数只写作 p[0]、p[1] 等连续索引，最多 12 个。至少一个候选包含 if 分支。只输出 JSON：{\"candidates\":[{\"source\":\"def score(...): ...\"},{\"source\":\"def score(...): ...\"}]}。"
+  }
+}

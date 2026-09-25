@@ -1,0 +1,103 @@
+{
+  "definitions": {
+    "severity": "人员伤亡和直接威胁的严重程度，越高越严重",
+    "uncertainty": "事件原因、责任或信息的不确定程度，越高越不确定",
+    "security_restriction": "检查、登记和临时管控对日常自由的限制程度，越高限制越强",
+    "economic_disruption": "对出行、企业和就业造成的经济扰动，越高扰动越大",
+    "transparency": "政府公开证据、解释和信息的充分程度，越高越透明",
+    "accountability": "调查、问责和纠错行动的明确程度，越高越充分",
+    "rights_protection": "对公民权利、公平和非歧视的保护信号，越高越强",
+    "international_scrutiny": "国际组织或其他国家监督和批评的强度，越高越强",
+    "reopening_pressure": "要求尽快恢复地铁和经济活动的压力，越高越强"
+  },
+  "stage_values": {
+    "subway_gas_attack": {
+      "severity": 1.0,
+      "uncertainty": 0.95,
+      "security_restriction": 0.1,
+      "economic_disruption": 0.25,
+      "transparency": 0.1,
+      "accountability": 0.1,
+      "rights_protection": 0.1,
+      "international_scrutiny": 0.05,
+      "reopening_pressure": 0.05
+    },
+    "official_classification": {
+      "severity": 0.9,
+      "uncertainty": 0.7,
+      "security_restriction": 0.35,
+      "economic_disruption": 0.25,
+      "transparency": 0.2,
+      "accountability": 0.2,
+      "rights_protection": 0.15,
+      "international_scrutiny": 0.05,
+      "reopening_pressure": 0.05
+    },
+    "citywide_security_escalation": {
+      "severity": 0.8,
+      "uncertainty": 0.55,
+      "security_restriction": 0.95,
+      "economic_disruption": 0.35,
+      "transparency": 0.25,
+      "accountability": 0.25,
+      "rights_protection": 0.1,
+      "international_scrutiny": 0.05,
+      "reopening_pressure": 0.05
+    },
+    "economic_shock": {
+      "severity": 0.65,
+      "uncertainty": 0.4,
+      "security_restriction": 0.55,
+      "economic_disruption": 1.0,
+      "transparency": 0.35,
+      "accountability": 0.3,
+      "rights_protection": 0.25,
+      "international_scrutiny": 0.1,
+      "reopening_pressure": 0.2
+    },
+    "leaked_internal_report": {
+      "severity": 0.75,
+      "uncertainty": 0.8,
+      "security_restriction": 0.4,
+      "economic_disruption": 0.55,
+      "transparency": 0.05,
+      "accountability": 0.9,
+      "rights_protection": 0.35,
+      "international_scrutiny": 0.15,
+      "reopening_pressure": 0.15
+    },
+    "international_reaction": {
+      "severity": 0.65,
+      "uncertainty": 0.55,
+      "security_restriction": 0.35,
+      "economic_disruption": 0.6,
+      "transparency": 0.55,
+      "accountability": 0.65,
+      "rights_protection": 0.85,
+      "international_scrutiny": 1.0,
+      "reopening_pressure": 0.2
+    },
+    "accountability_storm": {
+      "severity": 0.6,
+      "uncertainty": 0.45,
+      "security_restriction": 0.25,
+      "economic_disruption": 0.45,
+      "transparency": 0.5,
+      "accountability": 1.0,
+      "rights_protection": 0.6,
+      "international_scrutiny": 0.35,
+      "reopening_pressure": 0.25
+    },
+    "reconstruction_dispute": {
+      "severity": 0.45,
+      "uncertainty": 0.5,
+      "security_restriction": 0.2,
+      "economic_disruption": 0.7,
+      "transparency": 0.45,
+      "accountability": 0.6,
+      "rights_protection": 0.55,
+      "international_scrutiny": 0.25,
+      "reopening_pressure": 0.95
+    }
+  }
+}

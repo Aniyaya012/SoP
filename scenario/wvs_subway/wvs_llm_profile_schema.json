@@ -1,0 +1,61 @@
+{
+  "version": "wvs7-v6-official-natural-language-profile-1",
+  "source": {
+    "online_analysis_url": "https://www.worldvaluessurvey.org/WVSOnline.jsp",
+    "wave": "World Values Survey Wave 7 (2017-2022), country-pooled datafile v6.0",
+    "retrieval_note": "Field titles, response labels, and index directions were checked against the official WVS Wave 7 online analysis pages."
+  },
+  "discrete_fields": {
+    "X003R": {
+      "responses": {"1": "16-24", "2": "25-34", "3": "35-44", "4": "45-54", "5": "55-64", "6": "65 or older"}
+    },
+    "Q260": {
+      "responses": {"1": "male", "2": "female"}
+    },
+    "Q273": {
+      "responses": {"1": "married", "2": "living together as married", "3": "divorced", "4": "separated", "5": "widowed", "6": "single"}
+    },
+    "Q275": {
+      "responses": {
+        "0": "early childhood education (ISCED 0) or no education",
+        "1": "primary education (ISCED 1)",
+        "2": "lower secondary education (ISCED 2)",
+        "3": "upper secondary education (ISCED 3)",
+        "4": "post-secondary non-tertiary education (ISCED 4)",
+        "5": "short-cycle tertiary education (ISCED 5)",
+        "6": "bachelor or equivalent (ISCED 6)",
+        "7": "master or equivalent (ISCED 7)",
+        "8": "doctoral or equivalent (ISCED 8)"
+      }
+    },
+    "G_TOWNSIZE": {
+      "responses": {"1": "fewer than 2,000", "2": "2,000-5,000", "3": "5,000-10,000", "4": "10,000-20,000", "5": "20,000-50,000", "6": "50,000-100,000", "7": "100,000-500,000", "8": "500,000 or more"}
+    },
+    "Q3": {
+      "responses": {"1": "very", "2": "rather", "3": "not very", "4": "not at all"}
+    },
+    "Q46": {
+      "responses": {"1": "very happy", "2": "quite happy", "3": "not very happy", "4": "not at all happy"}
+    },
+    "Q55": {
+      "responses": {"1": "often", "2": "sometimes", "3": "rarely", "4": "never"}
+    },
+    "Q57": {
+      "responses": {"1": "most people can be trusted", "2": "one needs to be very careful when dealing with people"}
+    }
+  },
+  "numeric_fields": {
+    "Q274": {"kind": "children_count"},
+    "Y003": {"label": "autonomy index", "range": "-2 to 2", "direction": "Lower values emphasize obedience and religious faith; higher values emphasize determination, perseverance, and independence."},
+    "I_AUTHORITY": {"label": "inverse respect for authority", "range": "0 to 1", "direction": "Higher values indicate less respect for authority."},
+    "I_NATIONALISM": {"label": "inverse national pride", "range": "0 to 1", "direction": "Higher values indicate lower national pride."},
+    "DEFIANCE": {"label": "defiance", "range": "0 to 1", "direction": "Higher values indicate stronger defiance."},
+    "SCEPTICISM": {"label": "scepticism", "range": "0 to 1", "direction": "Higher values indicate stronger scepticism."},
+    "AUTONOMY": {"label": "autonomy", "range": "0 to 1", "direction": "Higher values indicate stronger autonomy."},
+    "EQUALITY": {"label": "equality orientation", "range": "0 to 1", "direction": "Higher values indicate stronger equality orientation."},
+    "I_DEVOUT": {"label": "inverse devoutness", "range": "0 to 1", "direction": "Higher values indicate lower religious devoutness."}
+  },
+  "excluded_from_prompt": {
+    "N_REGION_WVS": "This is a country-specific regional identifier. It has no shared cross-country interpretation and is retained only for numerical reproducibility, not presented to the LLM."
+  }
+}
